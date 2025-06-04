@@ -1,16 +1,22 @@
-# reto_pragma
+# Reto PRAGMA Flutter
 
-A new Flutter project.
+## Descripción
 
-## Getting Started
+Aplicación Flutter simple con:
 
-This project is a starting point for a Flutter application.
+- Listado de elementos en la pantalla principal
+- Pantalla de detalles con opción de editar/eliminar
+- Pantalla de formulario para crear/editar elementos
 
-A few resources to get you started if this is your first Flutter project:
+## Estructura
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `models/`: modelo de datos `Item`
+- `screens/`: `HomeScreen`, `DetailsScreen`, `FormScreen`
+- `widgets/`: componente reutilizable `ItemCard`
+- `data/`: lógica para manejar el estado de los items
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Consideraciones
+
+- No se usa base de datos externa; todo es en memoria
+- Se usa `Navigator.push()` para navegación simple
+- Ideal para expandir a futuras integraciones como SQLite, Firestore o APIs REST
