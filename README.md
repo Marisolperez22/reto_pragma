@@ -2,21 +2,22 @@
 
 ## Descripción
 
-Aplicación Flutter simple con:
+La aplicación se compone de:
 
-- Listado de elementos en la pantalla principal
-- Pantalla de detalles con opción de editar/eliminar
-- Pantalla de formulario para crear/editar elementos
+- Un listado de tarjetas en la pantalla principal
+- Pantalla de detalles con opción de editar o eliminar
+- Pantalla de formulario para crear o editar la información de las tarjetas
 
 ## Estructura
 
-- `models/`: modelo de datos `Item`
-- `screens/`: `HomeScreen`, `DetailsScreen`, `FormScreen`
-- `widgets/`: componente reutilizable `ItemCard`
-- `data/`: lógica para manejar el estado de los items
+- Modelo de datos para las tarjetas: Item
+- Pantallas principales: HomeScreen, DetailsScreen, FormScreen
+- Widget reutilizable: ItemCard
+- data: lógica para manejar el estado de los items
 
 ## Consideraciones
 
 - No se usa base de datos externa; todo es en memoria
-- Se usa `Navigator.push()` para navegación simple
-- Ideal para expandir a futuras integraciones como SQLite, Firestore o APIs REST
+- Se usa el paquete go_router para navegación simple
+- Se usa provider como manejador de estados
+- Se utiliza el patrón Singleton para utilizar la misma instancia de la clase que contiene la lista de tarjetas y los métodos para crear, editar y eliminar tarjeta entre pantallas. 
